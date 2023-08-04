@@ -24,9 +24,22 @@ spring.security.user.password=<Your-Password>
 ### Module 2. Spring In-Memory Authentication
     Spring Security’s InMemoryUserDetailsManager implements UserDetailsService to provide support for username/password based authentication that is stored in memory.
 
-    So, here basically we configure the Authentication Method, we define our own user whose credentials are saved in memory.
+    So, here basically i configure the Authentication Method, i defined my own user whose credentials are saved in memory.
 
     It is written inside SecurityConfiguration inside security package.
 
-    Logic is simple we build a create a User creating the instance of USerDetails.
+    Logic is simple we build or create a User creating the instance of USerDetails.
+    And at last i create a new instance of InMemoryUserDetais and ed the created users into that instance to actually create the in memory user.
 
+
+### Module 3. Simple Authorization
+    So, here i added authorization feature which helps us to access the specific api based on the role user has got.
+
+    Higher User can access all APIs and if we do down to hierarchy we get less authorization to specific APIs.
+
+    For this i changed only two pages
+        - HomeResources 
+            - Created 2 more APIs
+        -SecurityConfiguration
+            - Created a filterchain which is logic for the authorization
+            - will understand after utilizing this more and more
